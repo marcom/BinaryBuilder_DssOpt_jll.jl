@@ -86,6 +86,7 @@ products = [
     ExecutableProduct("opt-sd", :opt_sd),
     ExecutableProduct("opt-sd-gsl", :opt_sd_gsl),
     ExecutableProduct("random-seq", :random_seq),
+    ExecutableProduct("random-vienna", :random_vienna),
     ExecutableProduct("rna-ensemble-distance", :rna_ensemble_distance),
     LibraryProduct("libdssopt", :libdssopt),
 ]
