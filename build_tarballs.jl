@@ -5,38 +5,42 @@ using BinaryBuilder, Pkg
 using BinaryBuilderBase: BuildDependency
 
 name = "DssOpt"
-version = v"1.0.2"
+version = v"1.0.3"
 
 # url = "https://github.com/marcom/dss-opt/"
 # description = "Dynamics in sequence space optimisation for RNA sequence design"
 
 sources = [
-    # v1.0.2 (2023-06-27)
+    # v1.0.3 (2023-06-27)
     GitSource("https://github.com/marcom/dss-opt/",
-              "752fd8ccf3b6bf24904c17cf82521cf1a3838622")
+              "1b3f7e2a6ab332ad95fb6c3921b71734d8a9df18")
 
     # Old builds
 
-    # v1.0 (2012) (release tarballs made on github Sep 22, 2022)
+    # v1.0.2 (2023-06-27)
     # GitSource("https://github.com/marcom/dss-opt/",
-    #           "c0c1e0f47f5346453a9e73f26ba08a6e826d5a9b")
+    #           "752fd8ccf3b6bf24904c17cf82521cf1a3838622")
+
+    # 2023-06-26
+    # GitSource("https://github.com/marcom/dss-opt/",
+    #           "dc2af7474fe512e1cb783dead584c3ccbb990de5")
+
+    # 2023-03-19
+    # GitSource("https://github.com/marcom/dss-opt/",
+    #           "23f785736951e7369ae122a4a1c397948daecea1")
+
+    # 2022-12-03 git-sha1: 818cf83319ed85e11c01d00db3eeaedd2ce5815f
+    # GitSource("https://github.com/marcom/dss-opt/",
+    #           "818cf83319ed85e11c01d00db3eeaedd2ce5815f")
 
     # v1.0.1 (2022-09-23) git-sha1: cb69a3b9af1befdaad3bae53c764594011418016
     #                     DssOpt-v1.0.1+0 in https://github.com/marcom/DssOpt_jll.jl
     # GitSource("https://github.com/marcom/dss-opt/",
     #           "cb69a3b9af1befdaad3bae53c764594011418016")
 
-    # 2022-12-03 git-sha1: 818cf83319ed85e11c01d00db3eeaedd2ce5815f
+    # v1.0 (2012) (release tarballs made on github Sep 22, 2022)
     # GitSource("https://github.com/marcom/dss-opt/",
-    #           "818cf83319ed85e11c01d00db3eeaedd2ce5815f")
-
-    # 2023-03-19
-    # GitSource("https://github.com/marcom/dss-opt/",
-    #           "23f785736951e7369ae122a4a1c397948daecea1")
-
-    # 2023-06-26
-    # GitSource("https://github.com/marcom/dss-opt/",
-    #           "dc2af7474fe512e1cb783dead584c3ccbb990de5")
+    #           "c0c1e0f47f5346453a9e73f26ba08a6e826d5a9b")
 
     #DirectorySource("/home/mcm/src/dss-opt/dss-opt.git/";
     #                target="dss-opt-git"),
