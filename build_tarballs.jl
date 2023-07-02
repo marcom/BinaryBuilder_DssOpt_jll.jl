@@ -5,17 +5,21 @@ using BinaryBuilder, Pkg
 using BinaryBuilderBase: BuildDependency
 
 name = "DssOpt"
-version = v"1.0.3"
+version = v"1.0.4"
 
 # url = "https://github.com/marcom/dss-opt/"
 # description = "Dynamics in sequence space optimisation for RNA sequence design"
 
 sources = [
-    # v1.0.3 (2023-06-27)
+    # v1.0.4 (2023-07-02)
     GitSource("https://github.com/marcom/dss-opt/",
-              "1b3f7e2a6ab332ad95fb6c3921b71734d8a9df18")
+              "b3fc9ffc7890e621e5003773f3e024ebb07cea84")
 
     # Old builds
+
+    # v1.0.3 (2023-06-27)
+    # GitSource("https://github.com/marcom/dss-opt/",
+    #           "1b3f7e2a6ab332ad95fb6c3921b71734d8a9df18")
 
     # v1.0.2 (2023-06-27)
     # GitSource("https://github.com/marcom/dss-opt/",
