@@ -5,17 +5,21 @@ using BinaryBuilder, Pkg
 using BinaryBuilderBase: BuildDependency
 
 name = "DssOpt"
-version = v"1.0.4"
+version = v"1.0.5"
 
 # url = "https://github.com/marcom/dss-opt/"
 # description = "Dynamics in sequence space optimisation for RNA sequence design"
 
 sources = [
-    # v1.0.4 (2023-07-02)
+    # v1.0.5 (2023-07-11)
     GitSource("https://github.com/marcom/dss-opt/",
-              "b3fc9ffc7890e621e5003773f3e024ebb07cea84")
+              "3058fb040fdcebf901b250b624f7a9e0670ef96f")
 
     # Old builds
+
+    # v1.0.4 (2023-07-02)
+    # GitSource("https://github.com/marcom/dss-opt/",
+    #           "b3fc9ffc7890e621e5003773f3e024ebb07cea84")
 
     # v1.0.3 (2023-06-27)
     # GitSource("https://github.com/marcom/dss-opt/",
@@ -52,6 +56,9 @@ sources = [
 
 script = raw"""
 cd $WORKSPACE/srcdir/
+
+# remove -Werror, mingw32 doesn't have '%zu' printf format
+sed -i -e 's/-Werror//g' Makefile
 
 # build main executables
 CPPFLAGS="-I${includedir}" make -j${nproc} CC=${CC} LIB_FILE_EXT=${dlext} all lib
